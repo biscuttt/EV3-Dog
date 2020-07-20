@@ -1,0 +1,114 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "mindstorms",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MoveIntent",
+                    "slots": [
+                        {
+                            "name": "Direction",
+                            "type": "DirectionType"
+                        },
+                        {
+                            "name": "Duration",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{Direction} now",
+                        "{Direction} {Duration} seconds",
+                        "move {Direction} for {Duration} seconds"
+                    ]
+                },
+                {
+                    "name": "SetCommandIntent",
+                    "slots": [
+                        {
+                            "name": "Command",
+                            "type": "CommandType"
+                        }
+                    ],
+                    "samples": [
+                        "activate {Command} mode",
+                        "puppy {Command}",
+                        "puppy activate {Command}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "DirectionType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "stop"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CommandType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "sentry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "speak"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stay"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "set"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dance"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
